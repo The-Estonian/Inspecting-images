@@ -13,36 +13,30 @@
 ## How to Run
 
 ```python
+Have python installed
 git clone project
 cd project
-pyinstaller --onefile main.py
-main -fn "Jean Dupon"
+pip install -r requirements.txt # installs dependencies
+pyinstaller --onefile main.py # compiles the sourcecode into an exe
+cd dist # compiled exe is here
 ```
 
 ## Project Description
 
-This project is made to fetch OSINT data from the network.
+This project is made to check pictures for hidden PGP data.
 
 ```python
--fn "full name" # provides a fetch from a french phonebook that has open info about people and writes output into a result.txt file.
+-map "image/location" # fetches metadata from the picture and shows the longitude and latitude of where the picture was taken.
 
 #example:
--fn "Jean Dupont"
+-map "image.jpeg"
 ```
 
 ```python
--ip "ip" # provides a fetch from internet with target IP data and writes it into a result.txt file
+main -steg "image/location" # tries to fetch PGP data from the image provided and show it in the terminal.
 
 #example:
--ip "127.0.0.1"
--ip "211.211.211.211"
-```
-
-```python
--u "username" # provides a fetch from internet with target username and writes it into a result.txt file
-
-#example:
--u "@ChuckNorris"
+main -steg "image.jpeg"
 ```
 
 ## Audit
@@ -53,9 +47,8 @@ To audit the program, follow the steps [here](https://github.com/01-edu/public/t
 
 Here's Images of the project:
 
-<img src="img/image1.jpg" alt="image1" width="1000">
-<img src="img/image2.jpg" alt="image2" width="1000">
-<img src="img/image3.jpg" alt="image3" width="1000">
+<img src="img/map.jpg" alt="Map" width="1000">
+<img src="img/steg.jpg" alt="Steg" width="1000">
 
 ## Contributing
 

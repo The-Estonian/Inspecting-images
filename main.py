@@ -1,5 +1,6 @@
 from arguments import cl_arguments
 from imageMetadata import read_image_location, read_image_pgp
+from readPgp import read_image_pgp
 
 def main():
     args = cl_arguments()
